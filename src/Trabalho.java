@@ -1,8 +1,16 @@
 public class Trabalho {
 
     private int trabalhoId;
+    private static int proximoId=1;
     private String titulo;
     private String resumo;
+
+    public Trabalho(String titulo, String resumo) {
+        this.trabalhoId = proximoId;
+        proximoId++;
+        this.titulo = titulo;
+        this.resumo = resumo;
+    }
 
     // GETTERS E SETTERS
     /**
